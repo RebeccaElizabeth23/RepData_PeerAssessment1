@@ -52,7 +52,7 @@ The  **mean** daily step count is `r stepmean` and the **median** is `r stepmedi
 
 
 # What is the average daily activity pattern?
-1.First we want to plot the average number of steps taken across the whole day.
+1. First we want to plot the average number of steps taken across the whole day.
 
 ```{r time}
 # Group the data by interval
@@ -78,7 +78,7 @@ missingtotal <- sum(is.na(dataset$steps))
 ```
 The total number of missing values is `r missingtotal`.
 
-3. We now want to replace these missing values with the mean for that corresponding interval. These are saved in a new data set.
+2. We now want to replace these missing values with the mean for that corresponding interval. These are saved in a new data set.
 ```{r replace na}
 # Create a new data set
 na_dataset <- dataset
@@ -93,7 +93,7 @@ for (i in 1:(dim(na_dataset)[1])) {
   else {}}
 ```
 
-4.Finally we want to calculate the total mean and median number of steps per day  and plot the total daily step count in a histogram.
+3. Finally we want to calculate the total mean and median number of steps per day  and plot the total daily step count in a histogram.
 
 ```{r recalculate}
 # Group the data by date
@@ -116,7 +116,7 @@ Filling these missing values in has also meant the current data show a **normal 
 
 # Are there differences in activity patterns between weekdays and weekends?
 
-1.Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.
+1. Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.
 
 ```{r weekend factor}
 # Add a new empty column and name it 'Weekday'
